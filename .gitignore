@@ -23,3 +23,7 @@ $RECYCLE.BIN/
 .Spotlight-V100
 .Trashes
 .idea/
+.idea/evo.iml
+.idea/modules.xml
+.idea/preferred-vcs.xml
+.idea/workspace.xml
