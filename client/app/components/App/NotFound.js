@@ -1,12 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
+const divStyle = {
+    backgroundColor: "#FCFCFC",
+    paddingBottom: "55px"
+};
 
 const NotFound = () => (
-  <div>
-    <h2>Page not found</h2>
-
-    <Link to="/">Go home</Link>
-  </div>
+    <div className="content-area error-page" style={divStyle}>
+        <div className="container">
+            <div className="row">
+                <div className="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
+                    <h2 className="error-title">404</h2>
+                    <p>Sorry, the page you requested may have been moved or deleted</p>
+                    <a href="/" className="btn btn-default">Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
 );
 
 export default NotFound;

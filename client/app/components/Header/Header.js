@@ -1,25 +1,85 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import { Link } from 'react-router-dom';
+class Header extends Component {
 
-const Header = () => (
-  <div>
-      <meta charSet="UTF-8"/>
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
-      <title>Wolverine - Multipurpose Responsive HTML5 Template</title>
-      <meta name="description" content="Wolverine - Responsive Multipurpose HTML5 Template"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1"/>
-      <meta name="msapplication-TileColor" content="#da532c"/>
-      <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png"/>
-      <meta name="theme-color" content="#ffffff"/>
-      <link href="//fonts.googleapis.com/css?family=Montserrat:700,400" rel="stylesheet" type="text/css"/>
-      <link href="//fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic&amp;subset=latin,latin-ext,cyrillic" rel="stylesheet" type="text/css"/>
-      <link href="//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900" rel="stylesheet" type="text/css"/>
-      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
-      <link rel="stylesheet" type="text/css" href="../../styles/vendors/slick/slick.css"/>
-      <link rel="stylesheet" type="text/css" href="../../styles/vendors/full-page/jquery.fullPage.css"/>
-      <script src="../../styles/vendors/modernizr/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-  </div>
-);
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            home: "",
+            featured: "",
+            about: "",
+            blog: "",
+            contact: "",
+            login: ""
+        };
+    }
+
+    componentDidMount() {
+        switch (this.props.active) {
+            case "home":
+                this.setState({home : "active"});
+                break;
+            case "featured":
+                this.setState({featured : "active"});
+                break;
+            case "about":
+                this.setState({about : "active"});
+                break;
+            case "blog":
+                this.setState({blog : "active"});
+                break;
+            case "contact":
+                this.setState({contact : "active"});
+                break;
+            case "login":
+                this.setState({login : "active"});
+                break;
+        }
+    }
+
+    render() {
+        return (
+            <nav className="navbar navbar-default ">
+                <div className="container">
+                    <div className="navbar-header">
+                        <button type="button" className="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#navigation">
+                            <span className="sr-only">Toggle navigation</span>
+                            <span className="icon-bar"></span>
+                            <span className="icon-bar"></span>
+                            <span className="icon-bar"></span>
+                        </button>
+                        <a className="navbar-brand" href="/"><img src="assets/img/logo/logo.png" width="200"
+                                                                  height="125"/></a>
+                    </div>
+                    <div className="collapse navbar-collapse yamm" id="navigation">
+                        <ul className="main-nav nav navbar-nav navbar-right">
+                            <li className="ymm-sw" data-wow-delay="0.1s">
+                                <a href="/" className={this.state.home} data-delay="200">Home</a>
+                            </li>
+                            <li className="wow fadeInDown" data-wow-delay="0.3s"><a href="/property">Featured
+                                Listings</a></li>
+                            <li className="dropdown ymm-sw " data-wow-delay="0.1s">
+                                <a href="/about" data-toggle="dropdown" className={this.state.about} data-hover="dropdown" data-delay="200">About<b className="caret"></b></a>
+                                <ul className="dropdown-menu navbar-nav">
+                                    <li>
+                                        <a href="/about">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="/team">Meet the Team</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li className="wow fadeInDown" data-wow-delay="0.2s"><a className={this.state.blog} href="/properties">Blog</a></li>
+                            <li className="wow fadeInDown" data-wow-delay="0.5s"><a className={this.state.contact} href="/contact">Contact</a></li>
+                            <li className="wow fadeInDown" data-wow-delay="0.5s"><a className={this.state.login} href="/login">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        )
+    };
+}
 
 export default Header;
