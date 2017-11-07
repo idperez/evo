@@ -68,11 +68,11 @@ class Login extends Component {
                                         </div>
                                     </form>
                                     <br/>
-                                        <h2>Social login :  </h2>
+                                        <h2>Social login :</h2>
                                         <p>
-                                            <a className="login-social" href="#"><i className="fa fa-facebook"></i>&nbsp;Facebook</a>
-                                            <a className="login-social" href="#"><i className="fa fa-google-plus"></i>&nbsp;Gmail</a>
-                                            <a className="login-social" href="#"><i className="fa fa-twitter"></i>&nbsp;Twitter</a>
+                                            <a className="login-social" href="#"><i className="fa fa-facebook"/>&nbsp;Facebook</a>
+                                            <a className="login-social" href="#"><i className="fa fa-google-plus"/>&nbsp;Gmail</a>
+                                            <a className="login-social" href="#"><i className="fa fa-twitter"/>&nbsp;Twitter</a>
                                         </p>
                                 </div>
                             </div>

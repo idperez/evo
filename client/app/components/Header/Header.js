@@ -46,12 +46,11 @@ class Header extends Component {
                         <button type="button" className="navbar-toggle collapsed" data-toggle="collapse"
                                 data-target="#navigation">
                             <span className="sr-only">Toggle navigation</span>
-                            <span className="icon-bar"></span>
-                            <span className="icon-bar"></span>
-                            <span className="icon-bar"></span>
+                            <span className="icon-bar"/>
+                            <span className="icon-bar"/>
+                            <span className="icon-bar"/>
                         </button>
-                        <a className="navbar-brand" href="/"><img src="assets/img/logo/logo.png" width="200"
-                                                                  height="125"/></a>
+                        <a className="navbar-brand" href="/"><img src="assets/img/logo/logo.png" width="200" height="125"/></a>
                     </div>
                     <div className="collapse navbar-collapse yamm" id="navigation">
                         <ul className="main-nav nav navbar-nav navbar-right">
@@ -61,7 +60,7 @@ class Header extends Component {
                             <li className="wow fadeInDown" data-wow-delay="0.3s"><a href="/property">Featured
                                 Listings</a></li>
                             <li className="dropdown ymm-sw " data-wow-delay="0.1s">
-                                <a href="/about" data-toggle="dropdown" className={this.state.about} data-hover="dropdown" data-delay="200">About<b className="caret"></b></a>
+                                <a href="/about" data-toggle="dropdown" className={this.state.about} data-hover="dropdown" data-delay="200">About<b className="caret"/></a>
                                 <ul className="dropdown-menu navbar-nav">
                                     <li>
                                         <a href="/about">About Us</a>

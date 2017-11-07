@@ -120,7 +120,7 @@ const Featured = () => (
                     <div className="col-sm-6 col-md-3 p0">
                         <div className="box-tree more-proerty text-center">
                             <div className="item-tree-icon">
-                                <i className="fa fa-th"></i>
+                                <i className="fa fa-th"/>
                             </div>
                             <div className="more-entry overflow">
                                 <h5><a href="property-1.html" >CAN'T DECIDE ? </a></h5>
@@ -129,7 +129,6 @@ const Featured = () => (
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
